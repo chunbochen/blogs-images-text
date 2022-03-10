@@ -5,7 +5,8 @@
   </div>
 </template>
 <script>
-import GeneralPurposeModuleHeader from "../../components/generalPurposeModuleHeader.vue";
+import GeneralPurposeModuleHeader from "../../components/generalHeader/index.vue";
+
 export default {
   data() {
     return {
