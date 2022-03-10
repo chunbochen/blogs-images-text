@@ -1,30 +1,44 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <!-- <router-link to="/">首页</router-link> | -->
-      <!-- <router-link to="/about">关于</router-link>| -->
-      <router-link to="/">初级前端</router-link>
+    <!-- 标题栏 -->
+    <h1>案例演示</h1>
+    <!-- 导航栏 -->
+    <div class="nav">
+      <span class="toItem" v-for="(item, index) in toopen" :key="index">
+        <router-link :to="item.page">{{ item.name }}</router-link>
+      </span>
     </div>
-    <router-view/>
+
+    <!-- 路由占位符 -->
+    <router-view />
   </div>
 </template>
-
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
+<script>
+export default {
+  data() {
+    return {
+      // 导航栏
+      toopen: [
+        {
+          id: 1,
+          name: "首页",
+          page: "/",
+        },
+        {
+          id: 2,
+          name: "关于",
+          page: "/about",
+        },
+        {
+          id: 3,
+          name: "初级前端",
+          page: "/elementary",
+        },
+      ],
+    };
+  },
+};
+</script>
+<style lang="scss" scoped>
+@import'@/styles/app.scss'
 </style>
