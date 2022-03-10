@@ -21,15 +21,33 @@ export default new Router({
       component: () =>
         import(/* webpackChunkName: "about" */ "./views/About.vue"),
     },
+    // 案例
+    {
+      path: "/demo",
+      name: "demo",
+      component: () =>
+        import(/* webpackChunkName: "about" */ "./views/demo"),
+    },
     // 初级前端
     {
       path: "/elementary",
       name: "elementary",
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () =>
         import(/* webpackChunkName: "about" */ "./views/Elementary.vue"),
+    },
+    // 中级前端
+    {
+      path: "/middlerank",
+      name: "middlerank",
+      component: () =>
+        import(/* webpackChunkName: "about" */ "./views/Middlerank.vue"),
+    },
+    // 高级前端
+    {
+      path: "/advanced",
+      name: "advanced",
+      component: () =>
+        import(/* webpackChunkName: "about" */ "./views/Advanced.vue"),
     },
   ],
 });

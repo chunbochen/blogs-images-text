@@ -1,5 +1,5 @@
 <template>
-  <div class="Elementary">
+  <div class="advanced">
     <!-- 通用头部组件 -->
     <GeneralPurposeModuleHeader :data="intro"></GeneralPurposeModuleHeader>
   </div>
@@ -10,8 +10,8 @@ export default {
   data() {
     return {
       intro: {
-        capabilityName: "初级前端",
-        capabilityDescription: "HTML5 CSS3",
+        capabilityName: "高级前端",
+        capabilityDescription: "VUE",
         capabilityLabel:
           "水香木鱼",
         img: require("../assets/diaodumingling.png"),
@@ -24,7 +24,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.about {
+.advanced {
   background-color: #ebeef5;
 }
 </style>
